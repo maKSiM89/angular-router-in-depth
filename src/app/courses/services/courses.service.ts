@@ -65,7 +65,7 @@ export class CoursesService {
     }
 
 
-  loadLessonDetail(courseUrl: string, lessonSeqNo: string):Observable<LessonDetail> {
+  loadLessonDetail(courseUrl: string, lessonSeqNo: string): Observable<LessonDetail> {
     return this.http.get<LessonDetail>(`/api/lesson-details`, {
       params: {
         courseUrl,

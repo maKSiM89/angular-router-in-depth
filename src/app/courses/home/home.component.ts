@@ -39,10 +39,10 @@ export class HomeComponent implements OnInit {
 
   }
 
-  filterByCategory(courses$: Observable<Course[]>, category:string) {
+  filterByCategory(courses$: Observable<Course[]>, category: string) {
     return this.loading.showLoaderUntilCompleted(courses$)
       .pipe(
-        map(courses => courses.filter(course => course.category == category).sort(sortCoursesBySeqNo))
+        map(courses => courses.filter(course => course.category === category).sort(sortCoursesBySeqNo))
       );
   }
 
